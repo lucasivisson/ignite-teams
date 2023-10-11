@@ -6,7 +6,7 @@ import { Input } from "@components/Input";
 import { Filter } from "@components/Filter";
 import { FlatList } from "react-native";
 import { useState } from "react";
-import { HeaderList, NumbersOfPlayers } from "@components/Filter/styles";
+import { HeaderList, NumberOfPlayers } from "@components/Filter/styles";
 import { PlayerCard } from "@components/PlayerCard";
 import { ListEmpty } from "@components/ListEmpty";
 import { Button } from "@components/Button";
@@ -44,7 +44,7 @@ export function Players() {
           horizontal
         />
 
-        <NumbersOfPlayers>{players.length}</NumbersOfPlayers>
+        <NumberOfPlayers>{players.length}</NumberOfPlayers>
       </HeaderList>
 
       <FlatList
