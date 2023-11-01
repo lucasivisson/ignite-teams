@@ -10,14 +10,6 @@ import { Button } from "@components/Button";
 
 import { Container } from "./styles";
 
-type RootParamList = {
-  groups: undefined;
-  new: undefined;
-  players: {
-    group: string;
-  };
-};
-
 export function Groups() {
   const [groups, setGroups] = useState([]);
 
