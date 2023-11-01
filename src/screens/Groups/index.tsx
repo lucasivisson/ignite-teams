@@ -5,12 +5,27 @@ import { Header } from "@components/Header";
 import { Highlight } from "@components/Highlight";
 import { GroupCard } from "@components/GroupCard";
 import { ListEmpty } from "@components/ListEmpty";
+import { useNavigation } from "@react-navigation/native";
 import { Button } from "@components/Button";
 
 import { Container } from "./styles";
 
+type RootParamList = {
+  groups: undefined;
+  new: undefined;
+  players: {
+    group: string;
+  };
+};
+
 export function Groups() {
   const [groups, setGroups] = useState([]);
+
+  const navigation = useNavigation();
+
+  function handleNewGroup() {
+    navigation.navigate("new");
+  }
 
   return (
     <Container>
@@ -26,7 +41,7 @@ export function Groups() {
         )}
         showsVerticalScrollIndicator={false}
       />
-      <Button title="Criar nova turma" />
+      <Button title="Criar nova turma" onPress={handleNewGroup} />
     </Container>
   );
 }
