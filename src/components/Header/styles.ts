@@ -10,14 +10,12 @@ export const Container = styled.View`
 `;
 
 export const Logo = styled.Image`
-  margin-top: 30px;
   width: 46px;
   height: 55px;
 `;
 
 export const BackButton = styled.TouchableOpacity`
   flex: 1;
-  margin-top: 30px;
 `;
 
 export const BackIcon = styled(CaretLeft).attrs(({ theme }) => ({
